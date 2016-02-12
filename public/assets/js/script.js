@@ -8,14 +8,14 @@ var to = 10;
 
 function setData(data){
 	for (i in data) {
-		aaData.push([data[i].id, data[i].long_url, data[i].short_url, data[i].created_at, data[i].is_active, data[i].clicks])
+		aaData.push([data[i].id, data[i].long_url, data[i].short_url, data[i].created_at, data[i].is_active, data[i].clicks, data[i].clicks])
 	}
 	$("#dataTable").dataTable({
 		"aaData": aaData,
 		"bJQueryUI": true,
 		"aoColumns": [{
 			"sTitle": "No.",
-			"sWidth": "200px"
+			"sWidth": "10px"
 		}, {
 			"sTitle": "Long",
 			"sWidth": "200px"
@@ -27,10 +27,13 @@ function setData(data){
 			"sWidth": "200px"
 		}, {
 			"sTitle": "Active",
-			"sWidth": "200px"
+			"sWidth": "1px"
 		}, {
 			"sTitle": "Clicks",
-			"sWidth": "200px"
+			"sWidth": "10px"
+		}, {
+			"sTitle": "Analytics",
+			"sWidth": "10px"
 		}]
 
 	});
