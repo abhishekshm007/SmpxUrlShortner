@@ -16,7 +16,9 @@ class CreateUrlsTable extends Migration
             $table->increments('id');
             $table->string('short_url');
             $table->string('long_url');
-            $table->timestamp('created')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
+            $table->boolean('is_active');
             $table->bigInteger('clicks');
         });
     }
